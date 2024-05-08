@@ -5,7 +5,6 @@ import NavItem from './NavItem';
 import Navbar from 'navbar/Navbar';
 
 const RootLayout = () => {
-  console.log(Navbar);
   return (
     <div>
       <Suspense fallback="loading">
