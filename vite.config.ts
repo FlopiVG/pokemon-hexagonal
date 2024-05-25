@@ -2,7 +2,8 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import federation from '@originjs/vite-plugin-federation';
 
-// https://vitejs.dev/config/
+const NAVBAR_MFE_HOST = 'http://localhost:5173';
+
 export default defineConfig({
   base: '/',
   plugins: [
@@ -10,7 +11,7 @@ export default defineConfig({
     federation({
       name: 'pokemon-hexagonal',
       remotes: {
-        navbar: 'http://localhost:5173/assets/remoteEntry.js',
+        navbar: `${NAVBAR_MFE_HOST}/assets/remoteEntry.js`,
       },
       shared: ['react', 'react-dom'],
     }),
